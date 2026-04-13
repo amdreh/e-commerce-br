@@ -26,10 +26,9 @@ O objetivo central é responder a perguntas de negócio e preparar a base para f
 ### 🧠 Metodologia e Desenvolvimento
 Nesta fase, utilizei SQL (SQLite):
 
-1. **Inner Join como filtro de qualidade:** JOIN utilizado para traduzir os nomes das categorias, bem como ao mesmo tempo filtrar dados preenchidos incorretamente ou sem tradução.
-2. **Left foin na busca leads inativos:** JOIN utilizado para constatar que não há Utilizei a lógica de nulos para identificar se a base de clientes possui usuários que ainda não converteram, gerando insights para o time de Business Development.
-3. **Cálculo de Recência (Julian Day):** Implementei a conversão de strings de data para o formato numérico Juliano. Isso permitiu calcular com precisão matemática a quantidade de dias que cada cliente está sem comprar, utilizando uma data de referência estratégica (2018-10-17).
-
+1. **Inner join como filtro de qualidade:** JOIN utilizado para traduzir os nomes das categorias, bem como ao mesmo tempo filtrar dados preenchidos incorretamente ou sem tradução.
+2. **Left join na busca leads inativos:** JOIN utilizado para constatar a inexistência de usuários que ainda não converteram, o que levanta a suspeita de que a base de dados pode estar incompleta.
+3. **Join com o formato numérico Juliano:** JOIN utilizado para converter a data de texto em número, para assim calcular a quantidade de dias entre duas datas.
 ---
 
 ### 📂 Estrutura do Repositório
