@@ -10,7 +10,7 @@ FERRAMENTA: SQLite / SQLiteStudio
 -- Objetivo: Traduzir categorias e filtrar dados inconsistentes.
 -- =============================================================================
 
--- No código abaixo obtive a ID do produto, o nome da categoria em português da tabela products, e o nome original (em inglês) da categoria da tabela  
+-- No código abaixo obtive os nomes originais das categorias, em inlgês, tabela product_category_name_translation e juntei com ID do produto e o nome da categoria em português da tabela Products. As tabelas foram unidas pela coluna em comum (chave estrangeira) product_category_name 
 SELECT
     p.product_id AS ID_Produto,
     p.product_category_name AS Categoria_Portugues,
@@ -37,16 +37,19 @@ INNER JOIN product_category_name_translation AS cn
 -- Objetivo: Encontrar clientes cadastrados que nunca realizaram um pedido.
 -- =============================================================================
 
+-- No código abaixo obtenho o ID e cidade do cliente da tabela customers, e a ID do pedido da tabela orders. Como é um LEFT JOIN, o SQL vai pegar dados de customers e buscar um correspondente em orders.
 SELECT
     c.customer_id AS ID_Cliente,
     c.customer_city AS Cidade_Cliente,
     o.order_id AS ID_Pedido
 FROM customers AS c
 LEFT JOIN orders AS o
+    -- A ligação foi feita pela coluna em comum (chave estrangeira) customer_id.
     ON c.customer_id = o.customer_id
+-- É o filtro que vai fazer retornar só quem nunca fez uma compra buscando por valores nulos na coluna order_id da tabela orders.
 WHERE o.order_id IS NULL;
 
--- NOTA: Caso o resultado seja vazio, validar a integridade da fonte de dados com o time de engenharia.
+-- NOTA: Como o resultado foi vazio, validar a integridade da fonte de dados com o time de engenharia.
 
 /* Exemplo de Retorno (Top 5):
 | ID_Cliente | Cidade_Cliente | ID_Pedido |
