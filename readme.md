@@ -17,7 +17,7 @@ Este repositório documenta a utilização da linguagem SQL para realizar a extr
 
 ### 🚀 Objetivo do Projeto
 O objetivo central é responder a perguntas de negócio e preparar a base para futuras análises:
-* Garantir aos relatórios de categorias de produtos um preenchimento legível e padronizado;
+* Garantir aos relatórios de categorias de produtos um preenchimento mais completo e padronizado;
 * Identificar clientes cadastrados que nunca realizaram uma compra (leads frios)
 * Identificar clientes com maior tempo de inatividade (recência) para campanhas de marketing
 
@@ -26,7 +26,7 @@ O objetivo central é responder a perguntas de negócio e preparar a base para f
 ### 🧠 Metodologia e Desenvolvimento
 Nesta fase, utilizei SQL (SQLite):
 
-1. **Inner join como filtro de qualidade:** JOIN utilizado para traduzir os nomes das categorias, bem como ao mesmo tempo filtrar dados preenchidos incorretamente ou sem tradução.
+1. **Inner join como filtro de qualidade:** JOIN utilizado para acrescentar aos nomes das categorias, em português, os nomes originais em inglês para facilitar comparações com filiais estrageiras, ao mesmo tempo filtrando campos preenchidos incorretamente ou sem tradução.
 2. **Left join na busca leads inativos:** JOIN utilizado para constatar a inexistência de usuários que ainda não converteram, o que levanta a suspeita de que a base de dados pode estar incompleta.
 3. **Join com o formato numérico Juliano:** JOIN utilizado para converter a data de texto em número, para assim calcular a quantidade de dias entre duas datas.
 ---
