@@ -34,16 +34,16 @@ Nesta fase, utilizei SQL (SQLite):
 ### 📂 Estrutura do Repositório
 Os arquivos do projeto estão organizados da seguinte forma:
 
-* **1_consultas_sql**: Contém os arquivos `.sql` com as queries comentadas linha a linha.
-* **2_analise_recencia**: Documentação específica sobre o cálculo de dias sem comprar e análise de retenção.
-* **data**: Referência à base de dados original da Olist.
-* **README.md**: Documentação principal e apresentação do projeto.
+* **exports**: Contém os retornos das queries em formato csv;
+* **source**: Contém as bases de dados originais em csv;
+* **queries.sql**: Contém os códigos SQL das queries devidamente comentados;
+* **readme.md**: É este arquivo, que contém a apresentação e esclarecimentos sobre o projeto.
 
 ---
 
 ### 🛠️ Tecnologias Utilizadas
-* **SQLite / SQL Studio:** Manipulação e consulta de grandes volumes de dados.
-* **Markdown:** Documentação técnica e estruturação do projeto.
+* **SQLite / SQLiteStudio:** Manipulação do banco de dados;
+* **Markdown:** Documentação técnica e estruturação do projeto;
 * **GitHub:** Versionamento e exposição do portfólio.
 
 ---
