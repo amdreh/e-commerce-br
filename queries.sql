@@ -10,6 +10,7 @@ FERRAMENTA: SQLite / SQLiteStudio
 -- Objetivo: Traduzir categorias e filtrar dados inconsistentes.
 -- =============================================================================
 
+-- No código abaixo obtive a ID do produto, o nome da categoria em português da tabela products, e o nome original (em inglês) da categoria da tabela  
 SELECT
     p.product_id AS ID_Produto,
     p.product_category_name AS Categoria_Portugues,
